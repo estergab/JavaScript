@@ -1,0 +1,22 @@
+API Restful é um modelo padronizado de estruturação de uma API.
+Realiza o CRUD e retorna com códigos HTTP (200 OK, 404 Not Found, )
+
+Pastas:
+config: Armazena as configurções globais e serviços externos
+controllers: Logica das rotas (regras de negócio)
+models: Modelo de dados, define a estrutura dos dados no banco.
+routes: Definição das rotas (URL)
+middelewares: Interceptadores (autenticação, validação)
+validators: centraliza as validações de dados (schemas com Joi/Zod) para rotas, mensagens de erros.
+
+Arquivos:
+app (arquivo principal): Configuração inicial do Express (middelewares globais, conexão ao db)
+.env
+
+Benefícios:
+Organização:
+Reuso: middelewares e modelos são compartilháveis
+Escalabilidade: Novas features são adicionadas sem bagunça
+Testabilidade: Isola os componetes logo facilita testes pontuais
+
+
